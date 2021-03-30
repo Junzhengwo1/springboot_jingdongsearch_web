@@ -55,6 +55,14 @@ public class ContentServiceImpl implements ContentService {
         return !bulk.hasFailures();
     }
 
+    /**
+     * 获取数据；就是将ES中的数据展示出来
+     * @param keyword
+     * @param pageNo
+     * @param pageSize
+     * @return
+     * @throws IOException
+     */
     @Override
     public List<Map<String, Object>> searchPage(String keyword, Integer pageNo, Integer pageSize) throws IOException {
 

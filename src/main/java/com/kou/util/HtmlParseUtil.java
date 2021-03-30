@@ -33,6 +33,7 @@ public class HtmlParseUtil {
         //获取元素中的内容
         for (Element li : lis) {
             String img=li.getElementsByTag("img").eq(0).attr("data-lazy-img");
+            //下面这段代码就js获取相关Element相关的操作。
             String price=li.getElementsByClass("p-price").eq(0).text();
             String title=li.getElementsByClass("p-name").eq(0).text();
 
@@ -49,6 +50,11 @@ public class HtmlParseUtil {
     }
 
 
+    /**
+     * 测试这个工具类是否解析成功
+     * @param args
+     * @throws IOException
+     */
     public static void main(String[] args) throws IOException {
 
         HtmlParseUtil.parseJD("java").forEach(System.out::println);
